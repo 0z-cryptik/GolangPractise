@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"runtime"
 )
 
 const twenty int = 20
@@ -41,6 +42,17 @@ func main(){
 
 	fmt.Println(anotherNum)
 	fmt.Println(raisePow(3, 2, 10), raisePow(3, 3, 20))
+	fmt.Println(returnMachineOs())
+
+	//same as if one == 0 ...
+	switch {
+	case one == 0:
+		fmt.Println("one is 0")
+	case one == 1:
+		fmt.Println("one is 1")
+	default:
+		fmt.Printf("one is %v\n", one)
+	}
 }
 
 func add(x int, y int) int {
@@ -58,4 +70,18 @@ func raisePow(a, b, limit float64) float64 {
 		return v
 	} 
 	return limit
+}
+
+func returnMachineOs() string {
+	const partStatement = "Go runs on"
+	os := runtime.GOOS
+
+	switch os {
+	case "darwin":
+		return fmt.Sprintf("%v Darwin", partStatement)
+	case "linux":
+		return fmt.Sprintf("%v Linux", partStatement)
+	default:
+		return fmt.Sprintf("%v %v", partStatement, os)
+	}
 }
