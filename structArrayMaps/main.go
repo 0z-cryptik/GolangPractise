@@ -59,6 +59,19 @@ func main(){
 	fmt.Println(randomArray)
 	fmt.Println(randomSlice, cap(randomSlice))
 
-	
+	// how to create a slice with the make function
+	// this creates a slice of 5 integers
+	someSlice1 := make([]int, 5)
+
+	// this creates a slice of ints with length = 0 and capacity = 5
+	someSlice2 := make([]int, 0, 5)
+
+	fmt.Printf("len of someSlice1: %d\n cap of someSlice1: %d\n", len(someSlice1), cap(someSlice1))
+	fmt.Printf("len of someSlice2: %d\n cap of someSlice2: %d\n", len(someSlice2), cap(someSlice2))
+
+	someSlice1 = append(someSlice1, 1, 2, 3)
+
+	fmt.Println(someSlice1)
+
 
 }
