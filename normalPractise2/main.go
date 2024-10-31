@@ -27,4 +27,7 @@ func main(){
 	_, present := myMap["width"]
 
 	fmt.Println(present)
+	fmt.Println(v.Multiply())
+	typeAssersion()
+	typeSwitches()
 }
