@@ -15,6 +15,6 @@ func checkType(i interface{}) string {
 	case string:
 		return "it is a string"
 	default:
-		return "no idea wtf it is"
+		return fmt.Sprintf("it is a %T", i)
 	}
 }
