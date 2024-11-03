@@ -30,4 +30,5 @@ func main(){
 	fmt.Println(v.Multiply())
 	typeAssersion()
 	typeSwitches()
+	reader()
 }
